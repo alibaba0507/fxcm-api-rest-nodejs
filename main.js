@@ -11,7 +11,7 @@ try {
 }
 var token = config.token;
 var trading_api_host = config.trading_api_host;
-var trading_api_port = config.trading_api_port;
+var trading_api_port = process.env.PORT || config.trading_api_port;
 var trading_api_proto = config.trading_api_proto;
 if(typeof(token) === 'undefined' || typeof(trading_api_host) === 'undefied' || typeof(trading_api_port) === 'undefined' || typeof(trading_api_proto) === 'undefined') {
 	console.log('config.js contents error');
